@@ -8,13 +8,18 @@ The CNN is defined in the `model.py` file. The network architecture was carefull
 
 Here's the architecture overview:
 
-1. Two initial convolutional layers with 32 and 64 filters, each having a kernel size of 3x3.
-2. A max pooling layer with a size of 2x2.
-3. Additional convolutional layers with 128 and 256 filters, each with a kernel size of 3x3.
-4. Another max pooling layer with a size of 2x2.
-5. Final sequence of convolutional layers with 512, 1024, and 10 filters. All these layers use a kernel size of 3x3.
+- `conv1`: Conv2d layer with 10 output channels and a 3x3 kernel, followed by BatchNorm2d and Dropout(0.10).
+- `conv2`: Conv2d layer with 16 output channels and a 3x3 kernel, followed by BatchNorm2d and Dropout(0.10).
+- `conv3`: Conv2d layer with 32 output channels and a 3x3 kernel, followed by BatchNorm2d and Dropout(0.10).
+- `pool1`: MaxPool2d layer with a 2x2 kernel.
+- `conv4`: Conv2d layer with 10 output channels and a 1x1 kernel, followed by BatchNorm2d and Dropout(0.10).
+- `conv5`: Conv2d layer with 16 output channels and a 3x3 kernel, followed by BatchNorm2d and Dropout(0.10).
+- `conv6`: Conv2d layer with 32 output channels and a 3x3 kernel, followed by BatchNorm2d and Dropout(0.10).
+- `conv7`: Conv2d layer with 10 output channels and a 1x1 kernel, followed by BatchNorm2d and Dropout(0.10).
+- `conv8`: Conv2d layer with 10 output channels and a 7x7 kernel.
 
-Each convolutional layer is followed by a ReLU activation function, and the output of the final layer is transformed with a log softmax function for class probabilities.
+Final Convolutional layer - Applies a 7x7 filter to each input channel for global pooling, covering the entire size of the image, taking 10 input channels and outputting 10 channels
+Each convolutional layer is followed by a ReLU activation function, and the output of the final layer is flattened and transformed with a log softmax function for class probabilities.
 
 ## Training and Evaluation
 
@@ -32,9 +37,10 @@ Refer to `main.ipynb` for detailed training and evaluation process. The model is
 
 ## Results
 
-With this architecture and training regimen, the model achieved an accuracy of XX% on the test dataset within 20 epochs, using fewer than 20k parameters.
+With this architecture and training regimen, the model achieved an accuracy of 99.45% on the test dataset within 20 epochs, using fewer than 20k parameters.
 
 Sample Output:
+
 Epoch:  19
 Training...
 loss=0.015238138847053051 batch_id=117: 100%|██████████| 118/118 [00:25<00:00,  4.57it/s]
