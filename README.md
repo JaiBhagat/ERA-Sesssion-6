@@ -28,7 +28,7 @@ Each convolutional layer is followed by a ReLU activation function, and the outp
 - `train` function iterates over the training dataset, updating model parameters according to computed gradients.
 - `test` function evaluates the model on test data, yielding total test loss and accuracy.
 
-Refer to `main.ipynb` for detailed training and evaluation process. The model is trained for 20 epochs, and performance metrics are printed after each epoch.
+Refer to `S6.ipynb` for detailed training and evaluation process. The model is trained for 20 epochs, and performance metrics are printed after each epoch.
 
 ## Setup and Usage
 
@@ -45,7 +45,7 @@ Epoch:  19
 Training...
 loss=0.015238138847053051 batch_id=117: 100%|██████████| 118/118 [00:25<00:00,  4.57it/s]
 
-Test set: Average loss: 0.0165, Accuracy: 9945/10000 (99.45%)
+Test set: Average loss: 0.0187, Accuracy: 9940/10000 (99.40%)
 
 Running the notebook should yield similar output.
 
@@ -55,7 +55,7 @@ This is a straightforward, lean CNN model used to demonstrate efficient image cl
 
 - Exploring more complex or efficient CNN architectures
 - Implementing data augmentation techniques
-- Further tuning of hyperparameters, such as learning rate and batch size
+- Further tuning of hyperparameters, such as learning rate and optimizers 
 
 ## Contributing
 
