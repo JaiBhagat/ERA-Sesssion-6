@@ -2,6 +2,7 @@
 
 This backpropagation calculation is based on the architecture of a simple neural network with a single hidden layer and an output layer. The steps taken here follow the chain rule to calculate the gradients with respect to each weight in the network, which is essential for updating the weights in the training process to minimize the error.
 
+![Neural Network](./images/NN.PNG)
 
 
 **Step 1 Forward Propagation**: The first set of equations represents the process of forward propagation where we calculate the output of the network based on the inputs and the weights.
@@ -61,6 +62,10 @@ This backpropagation calculation is based on the architecture of a simple neural
     ∂E_total/∂w3 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8) * a_h2 * (1 - a_h2) * i1
     ∂E_total/∂w4 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8) * a_h2 * (1 - a_h2) * i2
 ```
+
+## Changes in error graph when we change the learning rate from [0.1, 0.2, 0.5, 0.8, 1.0, 2.0]
+
+![loss_curves](./images/loss_curves.PNG)
 
 
 ## Part 2
