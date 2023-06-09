@@ -105,11 +105,11 @@ Refer to `S6.ipynb` for detailed training and evaluation process. The model is t
 ## Setup and Usage
 
 1. Install the required dependencies, PyTorch and torchvision.
-2. Execute `main.ipynb`. This trains and evaluates the model, printing results as it proceeds.
+2. Execute `S6.ipynb`. This trains and evaluates the model, printing results as it proceeds.
 
 ## Results
 
-With this architecture and training regimen, the model achieved an accuracy of 99.45% on the test dataset within 20 epochs, using fewer than 20k parameters.
+With this architecture and training regimen, the model achieved an accuracy of 99.40% on the test dataset within 20 epochs, using fewer than 20k parameters.
 
 Sample Output:
 
